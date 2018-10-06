@@ -1,0 +1,4 @@
+[submodule "mpw-js"]
+	path = mpw-js
+	url = https://github.com/tmthrgd/mpw-js
+	branch = master
