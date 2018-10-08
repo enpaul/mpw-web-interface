@@ -80,3 +80,7 @@ input {
   background-color: #191919;
   color: grey;
 }
+
+.input-group-label {
+  min-width: 7rem;
+}

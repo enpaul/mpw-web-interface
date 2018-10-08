@@ -30,31 +30,78 @@
       <div id="main" class="grid-x">
         <ul class="small-12 cell tabs" data-tabs id="nav-tabs">
           <li class="tabs-title is-active"><a href="#password" aria-selected="true">Password</a></li>
-          <li class="tabs-title"><a data-tabs-target="sites" href="#sites">Saved Sites</a></li>
+          <li class="hide tabs-title"><a data-tabs-target="sites" href="#sites">Saved Sites</a></li>
         </ul>
         <div class="small-12 cell tabs-content" data-tabs-content="nav-tabs">
           <div class="tabs-panel is-active" id="password">
             <div class="grid-x">
-              <div class="medium-6 small-12 cell">
-                <p>Your Name:</p>
-                <input type="text" name="name" placeholder="Name"/>
+              <div class="small-12 medium-6 cell input-group">
+                <span class="input-group-label">Name</span>
+                <input class="input-group-field" type="text" name="name" placeholder="Your Full Name"/>
               </div>
             </div>
             <div class="grid-x">
-              <div class="medium-6 small-12 cell">
-                <p>Your Master Password:</p>
-                <input type="password" name="masterpass" placeholder="Password"/>
+              <div class="small-12 medium-6 cell input-group">
+                <span class="input-group-label">Site</span>
+                <input class="input-group-field" type="text" name="site" placeholder="Site or Context"/>
               </div>
             </div>
             <div class="grid-x">
-              <div class="medium-6 small-12 cell">
-                <p>Site/context:</p>
-                <input type="text" name="site" placeholder="Context"/>
+              <div class="small-12 medium-6 cell input-group">
+                <span class="input-group-label">Password</span>
+                <input class="input-group-field" type="password" name="masterpass" placeholder="Your Master Password"/>
               </div>
             </div>
             <div class="grid-x">
+              <div class="medium-1 small-2 cell">
+                <div class="tiny switch">
+                  <input class="switch-input" id="toggle-advanced" type="checkbox" name="toggle-advanced">
+                  <label class="switch-paddle" for="toggle-advanced">
+                    <span class="show-for-sr">Toggle advanced</span>
+                  </label>
+                </div>
+              </div>
+              <div class="medium-9 small-10 cell">
+                <p id="toggle-advanced-label">Show advanced options</p>
+              </div>
+            </div>
+            <span id="advanced" class="hide">
+              <div class="grid-x">
+                <div class="small-12 medium-6 cell input-group">
+                  <span class="input-group-label">Version</span>
+                  <select class="input-group-field" name="version">
+                    <option value="V3">MPW 3</option>
+                    <option value="V2">MPW 2</option>
+                    <option value="V1">MPW 1</option>
+                    <option value="V0">MPW 0</option>
+                  </select>
+                </div>
+              </div>
+              <div class="grid-x">
+                <div class="small-12 medium-6 cell input-group">
+                  <span class="input-group-label">Counter</span>
+                  <input class="input-group-field" type="number" name="counter" value="1">
+                </div>
+              </div>
+              <div class="grid-x">
+                <div class="small-12 medium-6 cell input-group">
+                  <span class="input-group-label">Algorithm</span>
+                  <select class="input-group-field" name="algorithm">
+                    <option value="long">Long</option>
+                    <option value="short">Short</option>
+                    <option value="basic">Basic</option>
+                    <option value="medium">Medium</option>
+                    <option value="maximum">Maximum</option>
+                    <option value="pin">PIN</option>
+                    <option value="name">Name</option>
+                    <option value="phrase">Phrase</option>
+                  </select>
+                </div>
+              </div>
+            </span>
+            <div class="grid-x">
               <div class="medium-6 small-12 cell">
-                <button type="button" class="expanded secondary button">Generate<i class="fas fa-cogs"></i></button>
+                <button type="button" id="generate" class="expanded secondary button">Generate<i class="fas fa-cogs"></i></button>
               </div>
             </div>
             <div class="grid-x hide">
