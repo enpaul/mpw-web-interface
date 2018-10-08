@@ -27,18 +27,18 @@ if (!Number.MAX_SAFE_INTEGER)
 
 // If Typed Arrays are not supported we include the polyfill
 // https://github.com/inexorabletash/polyfill
-window.ArrayBuffer || document.write("<script src=js/typedarray-polyfill.js><\/script>");
+window.ArrayBuffer || document.write("<script src=js/polyfill/typedarray.js><\/script>");
 
 // If TextEncoder is not supported we include the polyfill
 // https://github.com/inexorabletash/text-encoding
-window.TextEncoder || document.write("<script src=js/encoding-polyfill.js><\/script>");
-	
+window.TextEncoder || document.write("<script src=js/polyfill/encoding.js><\/script>");
+
 // If Promise is not supported we include the polyfill
 // https://github.com/taylorhakes/promise-polyfill
-window.Promise || document.write("<script src=js/promise-polyfill.js><\/script>");
+window.Promise || document.write("<script src=js/polyfill/promise.js><\/script>");
 
 // If setImmediate is not implemented we include the polyfill
-window.setImmediate || document.write("<script src=js/setImmediate-polyfill.js><\/script>");
+window.setImmediate || document.write("<script src=js/polyfill/setImmediate.js><\/script>");
 
 // Include the scrypt implementation
 document.write("<script src=js/mpw-js/pbkdf2.js><\/script>");
