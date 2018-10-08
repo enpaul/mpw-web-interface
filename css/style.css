@@ -76,11 +76,23 @@ h1 {
   color: grey;
 }
 
-input {
-  background-color: #191919;
-  color: grey;
+.input-group-label {
+  min-width: 6rem;
+  background-color: #353535;
+  color: white;
+  border-color: #191919;
 }
 
-.input-group-label {
-  min-width: 7rem;
+.input-group-field {
+  background-color: black;
+  border-color: #191919;
+  color: white;
+}
+
+.input-group-field:focus {
+  background-color: black;
+}
+
+.button .secondary {
+  background-color: #3d3d3d;
 }
