@@ -30,6 +30,7 @@ h1 {
 
 .tabs {
   border-style: none;
+  background-color: inherit;
 }
 
 .tabs-title a {
@@ -58,4 +59,24 @@ h1 {
   border-top-color: #353535;
   font-weight: bold;
   color: white;
+}
+
+.tabs-content {
+  background-color: black;
+  border-bottom-style: none;
+  border-top-style: solid;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-top-color: #353535;
+  border-left-color: #353535;
+  border-right-color: #353535;
+  border-top-width: 3px;
+  border-left-width: 3px;
+  border-right-width: 3px;
+  color: grey;
+}
+
+input {
+  background-color: #191919;
+  color: grey;
 }

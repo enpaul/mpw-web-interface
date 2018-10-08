@@ -21,23 +21,47 @@
             <h1><b>MasterPassword Web</b></h1>
           </div>
           <div class="align-center cell small-2 top-bar-right">
-            <a href="#">Credits</a>
+            <a href="#">credits</a>
             <a href="#">#</a>
           </div>
       </div>
 
       <div id="main" class="grid-x">
-        <ul class="tabs" data-tabs id="nav-tabs">
+        <ul class="small-12 cell tabs" data-tabs id="nav-tabs">
           <li class="tabs-title is-active"><a href="#password" aria-selected="true">Password</a></li>
-          <li class="tabs-title"><a data-tabs-target="settings" href="#settings">Advanced</a></li>
-          <li class="tabs-title"><a data-tabs-target="sites" href="#sites">Other Sites</a></li>
+          <li class="tabs-title"><a data-tabs-target="sites" href="#sites">Saved Sites</a></li>
         </ul>
-        <div class="tabs-content" data-tabs-content="nav-tabs">
+        <div class="small-12 cell tabs-content" data-tabs-content="nav-tabs">
           <div class="tabs-panel is-active" id="password">
-            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-          </div>
-          <div class="tabs-panel" id="settings">
-            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+            <div class="grid-x">
+              <div class="medium-6 small-12 cell">
+                <p>Your Name:</p>
+                <input type="text" name="name" placeholder="Name"/>
+              </div>
+            </div>
+            <div class="grid-x">
+              <div class="medium-6 small-12 cell">
+                <p>Your Master Password:</p>
+                <input type="password" name="masterpass" placeholder="Password"/>
+              </div>
+            </div>
+            <div class="grid-x">
+              <div class="medium-6 small-12 cell">
+                <p>Site/context:</p>
+                <input type="text" name="site" placeholder="Context"/>
+              </div>
+            </div>
+            <div class="grid-x">
+              <div class="medium-6 small-12 cell">
+                <button type="button" class="expanded secondary button">Generate</button>
+              </div>
+            </div>
+            <div class="grid-x hide">
+              <div class="medium-6 small-12 cell">
+                <p>Generated password:</p>
+                <input type="password" id="output" placeholder="Password"/>
+              </div>
+            </div>
           </div>
           <div class="tabs-panel" id="sites">
             <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
