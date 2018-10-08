@@ -12,16 +12,45 @@
     <script src="js/clipboard.min.js"></script>
     <script src="js/crypto-support.js"></script>
     <script src="js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
   </head>
 
   <body>
-    <header>
+    <div class="grid-container">
+      <div id="header" class="grid-x top-bar">
+          <div class="cell small-10">
+            <h1><b>MasterPassword Web</b></h1>
+          </div>
+          <div class="align-center cell small-2 top-bar-right">
+            <a href="#">Credits</a>
+            <a href="#">#</a>
+          </div>
+      </div>
 
-    </header>
+      <div id="main" class="grid-x">
+        <ul class="tabs" data-tabs id="nav-tabs">
+          <li class="tabs-title is-active"><a href="#password" aria-selected="true">Password</a></li>
+          <li class="tabs-title"><a data-tabs-target="settings" href="#settings">Advanced</a></li>
+          <li class="tabs-title"><a data-tabs-target="sites" href="#sites">Other Sites</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="nav-tabs">
+          <div class="tabs-panel is-active" id="password">
+            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+          </div>
+          <div class="tabs-panel" id="settings">
+            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+          </div>
+          <div class="tabs-panel" id="sites">
+            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
 
     <footer>
 
     </footer>
+
+    <script src="js/app.js"></script>
   </body>
 </html>

@@ -1,0 +1,61 @@
+.align-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+body {
+  background-color: black;
+  font-family: verdana;
+  color: white;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+#header {
+  background-color: #353535;
+  padding: 1rem;
+}
+
+#main {
+  padding-top: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.tabs {
+  border-style: none;
+}
+
+.tabs-title a {
+  color: white;
+  background-color: black;
+  border-top-style: solid;
+  border-top-width: 7px;
+  border-top-color: black;
+}
+
+.tabs-title a:hover {
+  background-color: black;
+  border-top-style: solid;
+  border-top-color: grey;
+  border-top-width: 7px;
+  color: white;
+}
+
+.tabs-title a[aria-selected="false"] {
+}
+
+.tabs-title a[aria-selected="true"] {
+  background: black;
+  border-top-style: solid;
+  border-top-width: 7px;
+  border-top-color: #353535;
+  font-weight: bold;
+  color: white;
+}
