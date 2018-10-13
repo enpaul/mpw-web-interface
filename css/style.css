@@ -24,6 +24,10 @@ h1 {
   padding-top: 1rem;
 }
 
+#error {
+  display: none;
+}
+
 .hide {
   display: none;
 }
@@ -95,4 +99,21 @@ h1 {
 
 .button .secondary {
   background-color: #3d3d3d;
+}
+
+.invalid {
+  border-color: red;
+}
+
+.callout.alert {
+  background-color: rgba(255,100,100,0.8);
+  color: white;
+}
+
+.close-button {
+  color: white;
+}
+
+.close-button:hover {
+  color: black;
 }
