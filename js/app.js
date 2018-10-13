@@ -12,6 +12,22 @@ $("#toggle-advanced").click(function () {
 });
 
 
+$('#show-password').click(function () {
+  output = document.getElementById('mpw-output')
+  if (output.type == 'password') {
+    output.type = 'text';
+    console.log('hello')
+    $('#show-password-icon').removeClass('fa-eye-slash')
+    $('#show-password-icon').addClass('fa-eye')
+  }
+  else if (output.type == 'text') {
+    output.type = 'password';
+    $('#show-password-icon').removeClass('fa-eye')
+    $('#show-password-icon').addClass('fa-eye-slash')
+  }
+});
+
+
 $("#generate").click(function () {
 
   $('#error').hide();
@@ -38,10 +54,13 @@ $("#generate").click(function () {
     return;
   }
 
+  $('#generate-icon').addClass('fa-spin')
+
   mpw = new MPW(name, pass, ver);
   promise = mpw.generate(site, count, "", alg);
 
   promise.then(function (pass) {
+    $('#generate-icon').removeClass('fa-spin')
     $('#output-dispaly').removeClass('hide');
     $('#mpw-output').val(pass);
   });
