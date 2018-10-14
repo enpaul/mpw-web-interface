@@ -13,10 +13,9 @@ $("#toggle-advanced").click(function () {
 
 
 $('#show-password').click(function () {
-  output = document.getElementById('mpw-output')
+  var output = document.getElementById('mpw-output')
   if (output.type == 'password') {
     output.type = 'text';
-    console.log('hello')
     $('#show-password-icon').removeClass('fa-eye-slash')
     $('#show-password-icon').addClass('fa-eye')
   }
@@ -32,12 +31,12 @@ $("#generate").click(function () {
 
   $('#error').hide();
 
-  name = $('#mpw-name').val();
-  site = $('#mpw-site').val();
-  pass = $('#mpw-masterpass').val();
-  ver = $('#mpw-version').val();
-  count = $('#mpw-counter').val();
-  alg = $('#mpw-algorithm').val();
+  var name = $('#mpw-name').val();
+  var site = $('#mpw-site').val();
+  var pass = $('#mpw-masterpass').val();
+  var ver = $('#mpw-version').val();
+  var count = $('#mpw-counter').val();
+  var alg = $('#mpw-algorithm').val();
 
   if (name == '') {
     $('#mpw-name').addClass('invalid');
@@ -56,8 +55,8 @@ $("#generate").click(function () {
 
   $('#generate-icon').addClass('fa-spin')
 
-  mpw = new MPW(name, pass, ver);
-  promise = mpw.generate(site, count, "", alg);
+  var mpw = new MPW(name, pass, ver);
+  var promise = mpw.generate(site, count, "", alg);
 
   promise.then(function (pass) {
     $('#generate-icon').removeClass('fa-spin')
@@ -66,3 +65,16 @@ $("#generate").click(function () {
   });
 
 });
+
+
+$("#copy-password").click(function () {
+  $('#mpw-output-meta').val($('#mpw-output').val());
+  var copyText = document.getElementById("mpw-output-meta");
+  copyText.select();
+  document.execCommand("copy");
+  $('#mpw-output-meta').val('');
+
+  alert(
+    "Copied " + $('#mpw-name').val() + "'s password for " + $('#mpw-site').val() + ": " + copyText.value
+  );
+} );

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/all.min.css">
 
     <script src="js/jquery.js"></script>
-    <script src="js/clipboard.min.js"></script>
+
     <script src="js/crypto-support.js"></script>
     <script src="js/foundation.min.js"></script>
   </head>
@@ -35,19 +35,19 @@
         <div class="small-12 cell tabs-content" data-tabs-content="nav-tabs">
           <div class="tabs-panel is-active" id="password">
             <div class="grid-x">
-              <div class="small-12 medium-6 cell input-group">
+              <div class="small-12 medium-6 cell input-group group-primary">
                 <span class="input-group-label">Name</span>
                 <input class="input-group-field" type="text" id="mpw-name" placeholder="Your Full Name"/>
               </div>
             </div>
             <div class="grid-x">
-              <div class="small-12 medium-6 cell input-group">
+              <div class="small-12 medium-6 cell input-group group-primary">
                 <span class="input-group-label">Site</span>
                 <input class="input-group-field" type="text" id="mpw-site" placeholder="Site or Context"/>
               </div>
             </div>
             <div class="grid-x">
-              <div class="small-12 medium-6 cell input-group">
+              <div class="small-12 medium-6 cell input-group group-primary">
                 <span class="input-group-label">Pass</span>
                 <input class="input-group-field" type="password" id="mpw-masterpass" placeholder="Your Master Password"/>
               </div>
@@ -67,7 +67,7 @@
             </div>
             <span id="advanced" class="hide">
               <div class="grid-x">
-                <div class="small-12 medium-6 cell input-group">
+                <div class="small-12 medium-6 cell input-group group-secondary">
                   <span class="input-group-label">Version</span>
                   <select id="mpw-version" class="input-group-field">
                     <option value="3">MPW v3</option>
@@ -78,14 +78,14 @@
                 </div>
               </div>
               <div class="grid-x">
-                <div class="small-12 medium-6 cell input-group">
+                <div class="small-12 medium-6 cell input-group group-secondary">
                   <span class="input-group-label">Counter</span>
                   <input class="input-group-field" type="number" id="mpw-counter" value="1">
                 </div>
               </div>
               <div class="grid-x">
-                <div class="small-12 medium-6 cell input-group">
-                  <span class="input-group-label">Alg</span>
+                <div class="small-12 medium-6 cell input-group group-secondary">
+                  <span class="input-group-label">Algorithm</span>
                   <select class="input-group-field" id="mpw-algorithm">
                     <option value="long">Long</option>
                     <option value="short">Short</option>
@@ -101,18 +101,19 @@
             </span>
             <div class="grid-x">
               <div class="medium-6 small-12 cell">
-                <button type="button" id="generate" class="expanded button">Generate&nbsp;&nbsp;<i id="generate-icon" class="fas fa-cog"></i></button>
+                <button type="submit" id="generate" class="expanded button">Generate&nbsp;&nbsp;<i id="generate-icon" class="fas fa-cog"></i></button>
               </div>
             </div>
             <div class="grid-x hide" id="output-dispaly">
               <div class="small-12 medium-6 cell input-group">
                 <span class="input-group-label" style="text-align: center;"><i class="fas fa-key"></i></span>
-                <input class="input-group-field" id="mpw-output" type="password">
+                <input class="input-group-field" id="mpw-output" type="password"/>
+                <input class="hide" id="mpw-output-meta" type="text" value="goop"/>
                 <div class="input-group-button">
-                  <button type="button" class="secondary button" title="show" id="show-password"><i id="show-password-icon" class="fas fa-eye-slash"></i></button>
+                  <button type="button" class="secondary button" title="Show password" id="show-password"><i id="show-password-icon" class="fas fa-eye-slash"></i></button>
                 </div>
                 <div class="input-group-button">
-                  <button type="button" class="secondary button" data-clipboard-target="mpw-output" title="copy"><i class="fas fa-clone"></i></button>
+                  <button type="button" class="secondary button" title="Copy to clipboard" id="copy-password"><i class="fas fa-clone"></i></button>
                 </div>
               </div>
             </div>
@@ -138,5 +139,6 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script src="js/clipboard.min.js"></script>
   </body>
 </html>

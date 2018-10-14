@@ -81,7 +81,6 @@ h1 {
 }
 
 .input-group-label {
-  min-width: 6rem;
   background-color: #353535;
   color: white;
   border-color: #191919;
@@ -95,6 +94,14 @@ h1 {
 
 .input-group-field:focus {
   background-color: black;
+}
+
+.group-primary .input-group-label {
+  min-width: 6rem;
+}
+
+.group-secondary .input-group-label {
+  min-width: 7rem;
 }
 
 .button .secondary {
