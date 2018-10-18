@@ -59,7 +59,7 @@ $("#generate").click(function () {
   var promise = mpw.generate(site, count, "", alg);
 
   promise.then(function (pass) {
-    $('#generate-icon').removeClass('fa-spin')
+    $('#generate-icon').removeClass('fa-spin');
     $('#output-dispaly').removeClass('hide');
     $('#mpw-output').val(pass);
   });
@@ -68,13 +68,11 @@ $("#generate").click(function () {
 
 
 $("#copy-password").click(function () {
-  $('#mpw-output-meta').val($('#mpw-output').val());
-  var copyText = document.getElementById("mpw-output-meta");
+  $('#mpw-output-temp').val($('#mpw-output').val());
+  var copyText = document.getElementById("mpw-output-temp");
   copyText.select();
   document.execCommand("copy");
-  $('#mpw-output-meta').val('');
+  //$('#mpw-output-temp').val('');
 
-  alert(
-    "Copied " + $('#mpw-name').val() + "'s password for " + $('#mpw-site').val() + ": " + copyText.value
-  );
+  alert('Copied generated password');
 } );
