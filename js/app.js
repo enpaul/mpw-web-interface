@@ -29,9 +29,9 @@ $('#show-password').click(function () {
 
 $("#generate").click(function () {
 
-  urlstr = "?v=" + $('#mpw-version').val() + "&c=" + $('#mpw-counter').val() + "&a=" + $('#mpw-algorithm').val() + "&n=" + encodeURI($('#mpw-name').val());
+  urlstr = "?a=" + $('#mpw-algorithm').val() + "&v=" + $('#mpw-version').val() + "&c=" + $('#mpw-counter').val() + "&n=" + $('#mpw-name').val();
 
-  history.pushState(null, "", urlstr);
+  history.pushState(null, "", encodeURI(urlstr));
 
   $('#error').hide();
 
