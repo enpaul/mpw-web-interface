@@ -29,6 +29,10 @@ $('#show-password').click(function () {
 
 $("#generate").click(function () {
 
+  urlstr = "?v=" + $('#mpw-version').val() + "&c=" + $('#mpw-counter').val() + "&a=" + $('#mpw-algorithm').val() + "&n=" + encodeURI($('#mpw-name').val());
+
+  history.pushState(null, "", urlstr);
+
   $('#error').hide();
 
   var name = $('#mpw-name').val();
@@ -75,4 +79,33 @@ $("#copy-password").click(function () {
   //$('#mpw-output-temp').val('');
 
   alert('Copied generated password');
-} );
+});
+
+function getURL() {
+  var vars = {};
+  var parts = window.location.href.replace(
+    /[?&]+([^=&]+)=([^&]*)/gi,
+    function(m,key,value) {
+      vars[key] = value;
+    }
+  );
+  return vars;
+}
+
+var urlparams = getURL();
+
+if (urlparams['n']) {
+  $('#mpw-name').val(decodeURI(urlparams['n']));
+}
+
+if (urlparams['v']) {
+  $('#mpw-version').val(urlparams['v']);
+}
+
+if (urlparams['c']) {
+  $('#mpw-counter').val(urlparams['c']);
+}
+
+if (urlparams['a']) {
+  $('#mpw-algorithm').val(urlparams['a']);
+}
